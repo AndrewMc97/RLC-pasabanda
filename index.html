@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLC Circuit Pasabanda</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Circuito RLC en Serie - Pasabanda</h1>
+    <div class="container">
+        <div class="sliders">
+            <div class="slider-container">
+                <label for="resistance">Resistencia (R): <span id="resistance-val">50</span> Ω</label>
+                <input type="range" id="resistance" min="10" max="1000" step="1" value="50">
+            </div>
+            <div class="slider-container">
+                <label for="inductance">Inductancia (L): <span id="inductance-val">60</span> mH</label>
+                <input type="range" id="inductance" min="10" max="100" step="1" value="60">
+            </div>
+            <div class="slider-container">
+                <label for="capacitance">Capacitancia (C): <span id="capacitance-val">1</span> µF</label>
+                <input type="range" id="capacitance" min="1" max="100" step="1" value="1">
+            </div>
+        </div>
+    </div>
+    <div id="plot"></div>
+    <div id="attenuation-plot"></div>
+    <div id="phase-shift-plot"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

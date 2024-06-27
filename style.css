@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 90px; /* Asegura que el contenido no quede oculto detrás de los sliders fijos en la parte superior */
+}
+
+.sliders {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around; /* Distribuye los sliders uniformemente */
+    flex-wrap: wrap; /* Permite que los sliders se ajusten en múltiples líneas en pantallas pequeñas */
+}
+
+.slider-container {
+    flex: 1 1 100%; /* Hace que cada slider ocupe el ancho completo en pantallas pequeñas */
+    margin: 10px;
+}
+
+#plot, #attenuation-plot, #phase-shift-plot {
+    margin: 20px auto;
+    width: 100%; /* Hace que los gráficos sean responsivos */
+    max-width: 800px; /* Limita el ancho máximo para evitar que sean demasiado grandes en pantallas grandes */
+    height: auto; /* Ajusta la altura automáticamente */
+}
