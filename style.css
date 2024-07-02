@@ -29,8 +29,23 @@ body {
 }
 
 #plot, #attenuation-plot, #phase-shift-plot {
-    margin: 20px auto;
-    width: 100%; /* Hace que los gráficos sean responsivos */
+    display: inline-block;
+    vertical-align: top;
+    width: 70%; /* Ajuste del ancho para dejar espacio a las fórmulas */
     max-width: 800px; /* Limita el ancho máximo para evitar que sean demasiado grandes en pantallas grandes */
     height: auto; /* Ajusta la altura automáticamente */
+}
+
+.formula-box {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%; /* Espacio para las fórmulas ajustado de 30% a 25% */
+    padding: 5px; /* Padding reducido para un aspecto más compacto */
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace; /* Esto es para mejorar la visibilidad del texto de la fórmula */
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 20px; /* Tamaño de fuente reducido para mantener la proporción */
+    margin-top: 20px; /* Alinea con los gráficos si es necesario */
 }
