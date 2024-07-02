@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RLC Circuit Pasabanda</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,9 +25,14 @@
         </div>
     </div>
     <div id="plot"></div>
+    <div class="formula-box"><p>$$T = \frac{1}{\sqrt{1+\left(\frac{\omega L}{R}-\frac{1}{\omega RC}\right)^2}}$$</p></div>
     <div id="attenuation-plot"></div>
+    <div class="formula-box"><p>$$A = 10\log_{10}(T^2)$$</p></div>
     <div id="phase-shift-plot"></div>
+    <div class="formula-box"><p>$$\tan(\phi) = -\frac{\omega L - \frac{1}{\omega C}}{R}$$</p></div>
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="script.js"></script>
-</body> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</body>
 </html>
