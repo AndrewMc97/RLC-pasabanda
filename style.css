@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    padding-top: 90px; /* Asegura que el contenido no quede oculto detrás de los sliders fijos en la parte superior */
+    padding-top: 90px;
 }
 
 .sliders {
@@ -19,33 +19,43 @@ body {
     padding: 10px 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-around; /* Distribuye los sliders uniformemente */
-    flex-wrap: wrap; /* Permite que los sliders se ajusten en múltiples líneas en pantallas pequeñas */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .slider-container {
-    flex: 1 1 100%; /* Hace que cada slider ocupe el ancho completo en pantallas pequeñas */
+    flex: 1 1 100%;
     margin: 10px;
 }
 
 #plot, #attenuation-plot, #phase-shift-plot {
     display: inline-block;
     vertical-align: top;
-    width: 70%; /* Ajuste del ancho para dejar espacio a las fórmulas */
-    max-width: 800px; /* Limita el ancho máximo para evitar que sean demasiado grandes en pantallas grandes */
-    height: auto; /* Ajusta la altura automáticamente */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
 }
 
 .formula-box {
     display: inline-block;
     vertical-align: top;
-    width: 25%; /* Espacio para las fórmulas ajustado de 30% a 25% */
-    padding: 5px; /* Padding reducido para un aspecto más compacto */
+    width: 100%;
+    padding: 10px;
     box-sizing: border-box;
-    font-family: 'Courier New', monospace; /* Esto es para mejorar la visibilidad del texto de la fórmula */
+    font-family: 'Courier New', monospace;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
     text-align: left;
-    font-size: 20px; /* Tamaño de fuente reducido para mantener la proporción */
-    margin-top: 20px; /* Alinea con los gráficos si es necesario */
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Media Query for devices with a max width of 768px */
+@media (max-width: 768px) {
+    .formula-box, #plot, #attenuation-plot, #phase-shift-plot {
+        width: 100%;
+        display: block;
+        max-width: none;
+        margin-top: 10px;
+    }
 }
